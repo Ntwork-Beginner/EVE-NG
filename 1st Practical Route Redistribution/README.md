@@ -11,18 +11,11 @@ R3: EIGRP domain router
 The setup includes multiple ethernet links and switches, replicating a real-world scenario for route redistribution tasks.
 
 ![Lab Topology]
-https://raw.githubusercontent.com/Ntwork-Beginner/EVE-NG/refs/heads/main/1st%20Practical%20Route%20Redistribution/Screenshot%202025-07-31%20150600.png
 
-Router	Interface	IP Address	Connected To	Protocol
-R1	Gi0/0	192.168.1.2/30	R2 Gi0/0	OSPF
-R1	Gi0/1 / Gi0/2	172.20.20.1/24
-172.20.10.1/24	Switch/SW	OSPF
-R2	Gi0/0	192.168.1.1/30	R1 Gi0/0	OSPF
-R2	Gi0/1	172.16.1.1/30	R3 Gi0/0	EIGRP
-R3	Gi0/0	172.16.1.2/30	R2 Gi0/1	EIGRP
-R3	Gi0/1 / Gi0/2	172.10.10.1/24
-172.10.20.1/24	Switch/SW	EIGRP
-Objectives
+![Uploading Screenshot 2025-07-31 150600.png…]()
+
+
+
 Understand and configure route redistribution between OSPF and EIGRP.
 
 Analyze routing table changes after redistribution.

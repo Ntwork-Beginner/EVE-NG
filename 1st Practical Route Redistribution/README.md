@@ -10,7 +10,7 @@ R3: EIGRP domain router
 
 The setup includes multiple ethernet links and switches, replicating a real-world scenario for route redistribution tasks.
 
-![Lab Topology](Screenshot-2025-07-31-150600.jpg Interfaces
+![Lab Topology](1st Practical Route Redistribution/Screenshot 2025-07-31 150600.png) Interfaces
 
 Router	Interface	IP Address	Connected To	Protocol
 R1	Gi0/0	192.168.1.2/30	R2 Gi0/0	OSPF

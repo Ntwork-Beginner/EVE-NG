@@ -12,8 +12,9 @@ The setup includes multiple ethernet links and switches, replicating a real-worl
 
 ![Lab Topology]
 
-![Uploading Screenshot 2025-07-31 150600.png…]()
 
+
+<img width="1180" height="633" alt="Screenshot 2025-07-31 150600" src="https://github.com/user-attachments/assets/a8427c14-2bb4-41bb-b1c2-29e3a2d3ccd4" />
 
 
 Understand and configure route redistribution between OSPF and EIGRP.

@@ -1,0 +1,17 @@
+en
+conf ter
+hostname R2
+
+int g0/0
+ip add 10.1.2.2 255.255.255.0
+no shut
+exit
+
+int g0/1
+ip add 10.1.3.2 255.255.255.0
+no shut
+exit
+
+int range g0/0-1
+ip ospf 1 area 0
+exit

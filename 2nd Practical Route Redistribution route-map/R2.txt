@@ -1,0 +1,32 @@
+en
+conf ter
+hostname R2
+
+int g0/0
+ip add 192.168.1.1 255.255.255.252
+no shut
+
+int g0/1
+ip add 172.16.1.1 255.255.255.252
+no shut
+
+int g0/0
+ip ospf 1 area 0
+exit
+
+router eigrp 1
+network 172.16.1.0
+no auto-summary
+exit
+
+
+router ospf 1
+redistribute eigrp 1
+exit
+
+
+router eigrp 1
+redistribute ospf 1 metric 1000000 1 255 1 1500
+exit
+
+do wr

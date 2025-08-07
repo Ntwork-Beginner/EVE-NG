@@ -1,0 +1,33 @@
+en
+conf ter
+hostname R1
+
+int g0/0
+ip add 10.1.1.1 255.255.255.0
+no shut
+exit
+
+int g0/1
+ip add 10.1.2.1 255.255.255.0
+no shut
+exit
+
+int g0/2
+ip add 10.1.4.1 255.255.255.0
+no shut
+exit
+
+int range g0/0-2
+ip ospf 1 area 0
+exit
+
+access-list 101 permit ip host 10.1.4.3 host 10.1.5.1
+route-map pc3_to_server
+match ip address 101
+set ip next-hop 10.1.1.2
+exit
+
+int g0/2
+ip policy route-map pc3_to_server
+exit
+do wr

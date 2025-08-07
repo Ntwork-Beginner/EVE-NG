@@ -1,0 +1,25 @@
+
+en
+conf ter
+hostname R3
+
+int g0/0
+ip add 172.16.1.2 255.255.255.252
+no shut
+
+int g0/1
+ip add 172.10.10.1 255.255.255.0
+no shut
+
+int g0/1
+ip add 172.10.20.1 255.255.255.0
+no shut
+
+router eigrp 1
+network 172.10.20.0
+network 172.10.10.0
+network 172.16.1.0
+no auto-summary
+exit
+
+do wr

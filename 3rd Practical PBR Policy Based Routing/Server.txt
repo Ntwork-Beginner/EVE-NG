@@ -1,0 +1,17 @@
+en
+conf ter
+hostname Server
+
+int g0/0
+ip add 10.1.3.3 255.255.255.0
+no shut
+ip ospf 1 area 0
+exit
+
+int loopback 0
+ip add 10.1.5.1 255.255.255.0
+no shut
+ip ospf 1 area 0
+exit
+
+do wr

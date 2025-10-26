@@ -1,0 +1,21 @@
+en
+conf ter
+hostname R1
+
+int g0/0
+ip add dhcp 
+no shut
+ip nat outside
+exit
+
+int g0/1
+ip add 192.178.1.2 255.255.255.0
+no shut
+ip nat inside
+standby 1 ip 192.178.1.1
+exit
+
+
+access-list 1 permit 192.178.1.0 0.0.0.255
+ip nat inside source list 1 int g0/0 overload
+do wr

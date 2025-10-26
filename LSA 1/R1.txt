@@ -1,0 +1,15 @@
+en
+conf ter
+hostname R1
+
+int g0/0
+ip add 10.0.12.1 255.255.255.252
+no shut
+exit
+
+int g0/1
+ip add 10.0.13.1 255.255.255.252
+no shut
+exit
+
+

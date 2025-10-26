@@ -1,0 +1,30 @@
+en
+conf ter
+hostname R2
+
+int g0/0
+ip add 10.0.12.2 255.255.255.252
+no shut
+exit
+
+int g0/1
+ip add 10.0.15.1 255.255.255.252
+no shut
+exit
+
+int g0/2
+ip add 10.0.14.1 255.255.255.252
+no shut
+exit
+
+int loopback 0
+ip add 2.2.2.2 255.255.255.255
+exit
+
+router ospf 1
+router-id 2.2.2.2
+network 10.0.12.0 0.0.0.3 area 0
+network 10.0.14.0 0.0.0.3 area 0
+network 10.0.15.0 0.0.0.3 area 0
+exit
+do wr
